@@ -6,8 +6,7 @@ score2 = np.load("scores2.npy")
 score3 = np.load("scores3.npy")
 print(score1)
 sum = score  + (score0 + score1 + score2)/3 
-y_preds = sum > 0.99*2
-y_preds = score >0.50
+y_preds = sum > 0.99*2 ##threshhold
 def read_answers(filename):
     answers = []
     with open(filename) as f:
