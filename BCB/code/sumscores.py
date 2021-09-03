@@ -3,8 +3,7 @@ score = np.load("scorest.npy")
 score0 = np.load("scores0.npy")
 score1 = np.load("scores1.npy")
 score2 = np.load("scores2.npy")
-score3 = np.load("scores3.npy")
-print(score1)
+
 sum = score  + (score0 + score1 + score2)/3 
 y_preds = sum > 0.99*2 ##threshhold
 def read_answers(filename):
