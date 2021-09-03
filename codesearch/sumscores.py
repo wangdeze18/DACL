@@ -60,7 +60,7 @@ score_ori = temp
 scores = score_ori
 np.save("scores_ori.npy", score_ori)
 '''
-scores = score 
+scores = score + (score0 + score1 + score2)/3
 
 
 sort_ids = np.argsort(scores, axis=-1, kind='quicksort', order=None)[:, ::-1]
