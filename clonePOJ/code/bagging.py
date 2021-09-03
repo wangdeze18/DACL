@@ -415,12 +415,12 @@ def test(args, model, tokenizer):
     #scores0,cluster,labels = calScores(args, model, tokenizer, "../dataset/test_align1.jsonl")
     #scores1,cluster,labels = calScores(args, model, tokenizer, "../dataset/test_align2.jsonl")
     #scores2,cluster,labels = calScores(args, model, tokenizer, "../dataset/test_align3.jsonl")
-    #scores1 = np.load("scorestest_align1_decl.npy")
+    scores1 = np.load("scorestest_align1_decl.npy")
     scores2 = np.load("scorestest_align2_decl.npy")
     scores3 = np.load("scorestest_align3_decl.npy")
     scores,cluster,labels = calScores(args, model, tokenizer, "../dataset/test.jsonl")
 
-    scores =  scores  + (scores2 + scores3)/2
+    scores =  scores  + (scores1 + scores2 + scores3)/3
 
     sort_ids = np.argsort(scores, axis=-1, kind='quicksort', order=None)[:, ::-1]
     eval_dataset = TextDataset(tokenizer, args, "../dataset/test.jsonl")
