@@ -50,15 +50,14 @@ In this repository, we have the following directories:
  + ./sumscores.py             # Code for test-time augmentation
 ```
 
-# Datasets and Models 
-**We also provide [datasets](https://zenodo.org/record/5376257#.YTC3oI4zZsY) and [pre-trained models](https://zenodo.org/record/5414294#.YTIb64gzY2w) fine-tuned by our approach to verify the results.**
-
 # How to use
 We apply our approach to code pre-trained models CodeBERT and GraphCodeBERT for fine-tuning. **Detailed documentation is coming soon！**
 
 
 For general fine-tuning (baseline models), please refer to [algorithm classification](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-POJ-104), [code clone detection](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench), and [code search](https://github.com/microsoft/CodeBERT/tree/master/GraphCodeBERT/codesearch).
 
+# Datasets and Models 
+**We also provide [datasets](https://zenodo.org/record/5376257#.YTC3oI4zZsY) and [pre-trained models](https://zenodo.org/record/5414294#.YTIb64gzY2w) fine-tuned by our approach to verify the results.**
 
 # Acknowledgement
 Our implementation is adapted from [CodeXGLUE](https://github.com/microsoft/CodeXGLUE) and [GraphCodeBERT](https://github.com/microsoft/CodeBERT/tree/master/GraphCodeBERT/codesearch) for the implementation of pre-trained models.
