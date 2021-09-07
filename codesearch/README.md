@@ -27,8 +27,9 @@ python run_curri.py --output_dir=./saved_models/java --config_name=microsoft/gra
 python run_curri.py --output_dir=./saved_models/java --config_name=microsoft/graphcodebert-base --model_name_or_path=microsoft/graphcodebert-base --tokenizer_name=microsoft/graphcodebert-base --lang=java --do_test --train_data_file=dataset/java/large_train_test.jsonl --eval_data_file=dataset/java/valid.jsonl --test_data_file=dataset/java/test.jsonl --codebase_file=dataset/java/codebase0.jsonl --num_train_epochs 10 --code_length 256 --data_flow_length 64 --nl_length 128 --train_batch_size 128 --eval_batch_size 256 --learning_rate 2e-5 --pacing_function linear --seed 123456 2>&1| tee saved_models/java/large_test.log;
 python run_curri.py --output_dir=./saved_models/java --config_name=microsoft/graphcodebert-base --model_name_or_path=microsoft/graphcodebert-base --tokenizer_name=microsoft/graphcodebert-base --lang=java --do_test --train_data_file=dataset/java/large_train_test.jsonl --eval_data_file=dataset/java/valid.jsonl --test_data_file=dataset/java/test.jsonl --codebase_file=dataset/java/codebase1.jsonl --num_train_epochs 10 --code_length 256 --data_flow_length 64 --nl_length 128 --train_batch_size 128 --eval_batch_size 256 --learning_rate 2e-5 --pacing_function linear --seed 123456 2>&1| tee saved_models/java/large_test.log;
 python run_curri.py --output_dir=./saved_models/java --config_name=microsoft/graphcodebert-base --model_name_or_path=microsoft/graphcodebert-base --tokenizer_name=microsoft/graphcodebert-base --lang=java --do_test --train_data_file=dataset/java/large_train_test.jsonl --eval_data_file=dataset/java/valid.jsonl --test_data_file=dataset/java/test.jsonl --codebase_file=dataset/java/codebase2.jsonl --num_train_epochs 10 --code_length 256 --data_flow_length 64 --nl_length 128 --train_batch_size 128 --eval_batch_size 256 --learning_rate 2e-5 --pacing_function linear --seed 123456 2>&1| tee saved_models/java/large_test.log;
-
-#Combine the above results and make predictions
+```
+   #Combine the above results and make predictions
+```
 python convert_scores.py
 python sumscores.py
 ```
