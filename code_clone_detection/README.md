@@ -27,7 +27,8 @@ python run_curri.py --output_dir=./saved_models --model_type=roberta --config_na
 python run_curri.py --output_dir=./saved_models --model_type=roberta --config_name=roberta-base --model_name_or_path=roberta-base --tokenizer_name=roberta-base --do_test --train_data_file=../dataset/large_train.txt --eval_data_file=../dataset/valid.txt --test_data_file=../dataset/test0.txt --epoch 2 --block_size 400 --train_batch_size 128 --eval_batch_size 256 --learning_rate 5e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 2>&1| tee test0.log;
 python run_curri.py --output_dir=./saved_models --model_type=roberta --config_name=roberta-base --model_name_or_path=roberta-base --tokenizer_name=roberta-base --do_test --train_data_file=../dataset/large_train.txt --eval_data_file=../dataset/valid.txt --test_data_file=../dataset/test1.txt --epoch 2 --block_size 400 --train_batch_size 128 --eval_batch_size 256 --learning_rate 5e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 2>&1| tee test1.log;
 python run_curri.py --output_dir=./saved_models --model_type=roberta --config_name=roberta-base --model_name_or_path=roberta-base --tokenizer_name=roberta-base --do_test --train_data_file=../dataset/large_train.txt --eval_data_file=../dataset/valid.txt --test_data_file=../dataset/test2.txt --epoch 2 --block_size 400 --train_batch_size 128 --eval_batch_size 256 --learning_rate 5e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 2>&1| tee test2.log;
-
-#Combine the above results and make predictions
+```
+   #Combine the above results and make predictions
+```
 python sumscores.py
 ```
