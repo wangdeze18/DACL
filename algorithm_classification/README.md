@@ -34,6 +34,7 @@ python run_class_curri.py --output_dir=./saved_models --model_type=roberta --con
 python run_class_curri.py --output_dir=./saved_models --model_type=roberta --config_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --tokenizer_name=roberta-base --do_test --train_data_file=../dataset/large_train.jsonl --eval_data_file=../dataset/valid.jsonl --test_data_file=../dataset/test_align3.jsonl --epoch 2 --block_size 400 --train_batch_size 128 --eval_batch_size 256 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --pacing_function root_10 --seed 123456 2>&1| tee test.log;
 ```
    #Combine the above results and make predictions
+   
 ```
 python bagging.py --output_dir=./saved_models --model_type=roberta --config_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --tokenizer_name=roberta-base --do_test --train_data_file=../dataset/large_train.jsonl --eval_data_file=../dataset/valid.jsonl --test_data_file=../dataset/test.jsonl --epoch 2 --block_size 400 --train_batch_size 128 --eval_batch_size 256 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 2>&1| tee test.log;
 python ../evaluator/extract_answers.py -c ../dataset/test.jsonl -o saved_models/answers.jsonl; 
