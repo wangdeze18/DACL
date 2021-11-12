@@ -1,0 +1,71 @@
+Requirement already satisfied: transformers in /opt/conda/lib/python3.8/site-packages (4.5.1)
+Requirement already satisfied: tokenizers<0.11,>=0.10.1 in /opt/conda/lib/python3.8/site-packages (from transformers) (0.10.2)
+Requirement already satisfied: packaging in /opt/conda/lib/python3.8/site-packages (from transformers) (20.4)
+Requirement already satisfied: requests in /opt/conda/lib/python3.8/site-packages (from transformers) (2.24.0)
+Requirement already satisfied: sacremoses in /opt/conda/lib/python3.8/site-packages (from transformers) (0.0.35)
+Requirement already satisfied: regex!=2019.12.17 in /opt/conda/lib/python3.8/site-packages (from transformers) (2020.11.13)
+Requirement already satisfied: filelock in /opt/conda/lib/python3.8/site-packages (from transformers) (3.0.12)
+Requirement already satisfied: tqdm>=4.27 in /opt/conda/lib/python3.8/site-packages (from transformers) (4.53.0)
+Requirement already satisfied: numpy>=1.17 in /opt/conda/lib/python3.8/site-packages (from transformers) (1.19.2)
+Requirement already satisfied: pyparsing>=2.0.2 in /opt/conda/lib/python3.8/site-packages (from packaging->transformers) (2.4.7)
+Requirement already satisfied: six in /opt/conda/lib/python3.8/site-packages (from packaging->transformers) (1.15.0)
+Requirement already satisfied: chardet<4,>=3.0.2 in /opt/conda/lib/python3.8/site-packages (from requests->transformers) (3.0.4)
+Requirement already satisfied: idna<3,>=2.5 in /opt/conda/lib/python3.8/site-packages (from requests->transformers) (2.10)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/lib/python3.8/site-packages (from requests->transformers) (1.25.11)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.8/site-packages (from requests->transformers) (2020.11.8)
+Requirement already satisfied: click in /opt/conda/lib/python3.8/site-packages (from sacremoses->transformers) (7.1.2)
+Requirement already satisfied: joblib in /opt/conda/lib/python3.8/site-packages (from sacremoses->transformers) (0.17.0)
+11/12/2021 15:52:03 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: False
+11/12/2021 15:52:13 - INFO - __main__ - Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=400, cache_dir='', config_name='microsoft/codebert-base', device=device(type='cuda'), do_eval=False, do_lower_case=False, do_test=True, do_train=False, epoch=2, eval_all_checkpoints=False, eval_batch_size=256, eval_data_file='../dataset/valid.jsonl', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, logging_steps=50, max_grad_norm=1.0, max_steps=-1, mlm=False, mlm_probability=0.15, model_name_or_path='microsoft/codebert-base', model_type='roberta', n_gpu=4, no_cuda=False, num_train_epochs=1.0, output_dir='./saved_models', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=64, per_gpu_train_batch_size=32, save_steps=50, save_total_limit=None, seed=123456, server_ip='', server_port='', start_epoch=0, start_step=0, test_data_file='../dataset/test.jsonl', tokenizer_name='roberta-base', train_batch_size=128, train_data_file='../dataset/train.jsonl', warmup_steps=0, weight_decay=0.0)
+11/12/2021 15:52:47 - INFO - __main__ - ***** Running Test *****
+11/12/2021 15:52:47 - INFO - __main__ - Num examples = 30815
+11/12/2021 15:52:47 - INFO - __main__ - Batch size = 256
+/opt/conda/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:64: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+warnings.warn('Was asked to gather along dimension 0, but all '
+{'MAP': 0.9295}
+{'MAP@R': 0.9094}
+11/12/2021 15:57:27 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: False
+11/12/2021 15:57:37 - INFO - __main__ - Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=400, cache_dir='', config_name='microsoft/codebert-base', device=device(type='cuda'), do_eval=False, do_lower_case=False, do_test=True, do_train=False, epoch=2, eval_all_checkpoints=False, eval_batch_size=256, eval_data_file='../dataset/valid.jsonl', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, logging_steps=50, max_grad_norm=1.0, max_steps=-1, mlm=False, mlm_probability=0.15, model_name_or_path='microsoft/codebert-base', model_type='roberta', n_gpu=4, no_cuda=False, num_train_epochs=1.0, output_dir='./saved_models', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=64, per_gpu_train_batch_size=32, save_steps=50, save_total_limit=None, seed=123456, server_ip='', server_port='', start_epoch=0, start_step=0, test_data_file='../dataset/test1.jsonl', tokenizer_name='roberta-base', train_batch_size=128, train_data_file='../dataset/train.jsonl', warmup_steps=0, weight_decay=0.0)
+11/12/2021 15:58:07 - INFO - __main__ - ***** Running Test *****
+11/12/2021 15:58:07 - INFO - __main__ - Num examples = 31297
+11/12/2021 15:58:07 - INFO - __main__ - Batch size = 256
+/opt/conda/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:64: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+warnings.warn('Was asked to gather along dimension 0, but all '
+{'MAP': 0.9122}
+{'MAP@R': 0.8888}
+11/12/2021 16:02:54 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: False
+11/12/2021 16:03:04 - INFO - __main__ - Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=400, cache_dir='', config_name='microsoft/codebert-base', device=device(type='cuda'), do_eval=False, do_lower_case=False, do_test=True, do_train=False, epoch=2, eval_all_checkpoints=False, eval_batch_size=256, eval_data_file='../dataset/valid.jsonl', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, logging_steps=50, max_grad_norm=1.0, max_steps=-1, mlm=False, mlm_probability=0.15, model_name_or_path='microsoft/codebert-base', model_type='roberta', n_gpu=4, no_cuda=False, num_train_epochs=1.0, output_dir='./saved_models', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=64, per_gpu_train_batch_size=32, save_steps=50, save_total_limit=None, seed=123456, server_ip='', server_port='', start_epoch=0, start_step=0, test_data_file='../dataset/test2.jsonl', tokenizer_name='roberta-base', train_batch_size=128, train_data_file='../dataset/train.jsonl', warmup_steps=0, weight_decay=0.0)
+11/12/2021 16:03:36 - INFO - __main__ - ***** Running Test *****
+11/12/2021 16:03:36 - INFO - __main__ - Num examples = 31295
+11/12/2021 16:03:36 - INFO - __main__ - Batch size = 256
+/opt/conda/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:64: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+warnings.warn('Was asked to gather along dimension 0, but all '
+{'MAP': 0.8912}
+{'MAP@R': 0.8638}
+11/12/2021 16:08:24 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: False
+11/12/2021 16:09:03 - INFO - __main__ - Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=400, cache_dir='', config_name='microsoft/codebert-base', device=device(type='cuda'), do_eval=False, do_lower_case=False, do_test=True, do_train=False, epoch=2, eval_all_checkpoints=False, eval_batch_size=256, eval_data_file='../dataset/valid.jsonl', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, logging_steps=50, max_grad_norm=1.0, max_steps=-1, mlm=False, mlm_probability=0.15, model_name_or_path='microsoft/codebert-base', model_type='roberta', n_gpu=4, no_cuda=False, num_train_epochs=1.0, output_dir='./saved_models', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=64, per_gpu_train_batch_size=32, save_steps=50, save_total_limit=None, seed=123456, server_ip='', server_port='', start_epoch=0, start_step=0, test_data_file='../dataset/test3.jsonl', tokenizer_name='roberta-base', train_batch_size=128, train_data_file='../dataset/train.jsonl', warmup_steps=0, weight_decay=0.0)
+11/12/2021 16:09:37 - INFO - __main__ - ***** Running Test *****
+11/12/2021 16:09:37 - INFO - __main__ - Num examples = 31298
+11/12/2021 16:09:37 - INFO - __main__ - Batch size = 256
+/opt/conda/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:64: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+warnings.warn('Was asked to gather along dimension 0, but all '
+{'MAP': 0.8763}
+{'MAP@R': 0.8461}
+11/12/2021 16:14:24 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: False
+11/12/2021 16:15:03 - INFO - __main__ - Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=400, cache_dir='', config_name='microsoft/codebert-base', device=device(type='cuda'), do_eval=False, do_lower_case=False, do_test=True, do_train=False, epoch=2, eval_all_checkpoints=False, eval_batch_size=256, eval_data_file='../dataset/valid.jsonl', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, logging_steps=50, max_grad_norm=1.0, max_steps=-1, mlm=False, mlm_probability=0.15, model_name_or_path='microsoft/codebert-base', model_type='roberta', n_gpu=4, no_cuda=False, num_train_epochs=1.0, output_dir='./saved_models', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=64, per_gpu_train_batch_size=32, save_steps=50, save_total_limit=None, seed=123456, server_ip='', server_port='', start_epoch=0, start_step=0, test_data_file='../dataset/test4.jsonl', tokenizer_name='roberta-base', train_batch_size=128, train_data_file='../dataset/train.jsonl', warmup_steps=0, weight_decay=0.0)
+11/12/2021 16:15:39 - INFO - __main__ - ***** Running Test *****
+11/12/2021 16:15:39 - INFO - __main__ - Num examples = 31281
+11/12/2021 16:15:39 - INFO - __main__ - Batch size = 256
+/opt/conda/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:64: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+warnings.warn('Was asked to gather along dimension 0, but all '
+{'MAP': 0.8599}
+{'MAP@R': 0.8267}
+11/12/2021 16:20:27 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: False
+11/12/2021 16:20:38 - INFO - __main__ - Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=400, cache_dir='', config_name='microsoft/codebert-base', device=device(type='cuda'), do_eval=False, do_lower_case=False, do_test=True, do_train=False, epoch=2, eval_all_checkpoints=False, eval_batch_size=256, eval_data_file='../dataset/valid.jsonl', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, logging_steps=50, max_grad_norm=1.0, max_steps=-1, mlm=False, mlm_probability=0.15, model_name_or_path='microsoft/codebert-base', model_type='roberta', n_gpu=4, no_cuda=False, num_train_epochs=1.0, output_dir='./saved_models', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=64, per_gpu_train_batch_size=32, save_steps=50, save_total_limit=None, seed=123456, server_ip='', server_port='', start_epoch=0, start_step=0, test_data_file='../dataset/test5.jsonl', tokenizer_name='roberta-base', train_batch_size=128, train_data_file='../dataset/train.jsonl', warmup_steps=0, weight_decay=0.0)
+11/12/2021 16:21:13 - INFO - __main__ - ***** Running Test *****
+11/12/2021 16:21:13 - INFO - __main__ - Num examples = 31284
+11/12/2021 16:21:13 - INFO - __main__ - Batch size = 256
+/opt/conda/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:64: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+warnings.warn('Was asked to gather along dimension 0, but all '
+{'MAP': 0.8494}
+{'MAP@R': 0.8142}
