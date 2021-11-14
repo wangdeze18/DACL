@@ -1,6 +1,6 @@
-# t-test and effect size(Cohen's d)
+# Statistical analysis for code clone detection on BigCloneBench
 
-We add a statistical analysis with t-test and effect size computation on code clone detection task. We compare CodeBERT fine-tuned by our approach with original GraphCodeBERT. 
+We add a statistical analysis with t-test and effect size computation(Cohen's d) on code clone detection task. We compare CodeBERT fine-tuned by our approach with original GraphCodeBERT. 
 
 
 
