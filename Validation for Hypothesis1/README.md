@@ -15,9 +15,11 @@ See log file for details.
 
 # Illustration
 
-We trained the model on the entire augmented dataset D' and evaluated on its sub-datasets(Original, 1-Trans, 2-Trans, 3-Trans, 4-Trans and 5-Trans). These datasets are equal in size to ensure the fairness of the experiment.
+We trained CodeBERT on the entire augmented dataset D' and evaluated on its sub-datasets(Original, 1-Trans, 2-Trans, 3-Trans, 4-Trans and 5-Trans). These datasets are equal in size to ensure the fairness of the experiment.
 
 The experimental results reveal that as the number of transformations increases, the learning effects of the dataset become worse.
+
+
 
 
 
