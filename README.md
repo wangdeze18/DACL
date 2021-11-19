@@ -50,6 +50,37 @@ In this repository, we have the following directories:
  + ./sumscores.py             # Code for test-time augmentation
 ```
 
+## ./Validation for Hypothesis1
+
+
+```
+./Validation for Hypothesis1  # This subdirectory contains data and results of the validation for Hypothesis1
+ + ./hypothesis_1.log         # The log file of the validation experiment for Hypothesis1
+```
+
+## ./data_preparation(4.1)
+
+```
+./data_preparation(4.1)       # This subdirectory contains an example program for cleaning POJ104
+ + ./to_correct.py            # The example program to remove the non-compliable programs 
+```
+
+## ./statistical analysis
+
+```
+./statistical analysis        # This subdirectory contains a statistical analysis for code clone detection on BigCloneBench
+ + ./labels.npy               # True labels (1 for cloned pairs, 0 for others)
+ + ./scorest-graphcodebert.npy# Predictions (logits) made by original GraphCodeBERT
+ + ./scorest_codebert.npy     # Predictions (logits) made by the augmented CodeBERT which are fine-tuned by our approach 
+ + ./t_test_main.py           # Code for t-test and effect size computation(Cohen's d) 
+```
+
+## ./data for Analysis Section
+
+```
+./data for Analysis Section   # This subdirectory contains data for Analysis Section (Section 5)
+```
+
 # How to use
 We apply our approach to code pre-trained models CodeBERT and GraphCodeBERT for fine-tuning. 
   
