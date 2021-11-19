@@ -6,4 +6,4 @@ All code and data are provided and please refer to ./algorithm_classification, .
 
 # Data
 
-For effects of augmentation type in Section 5.2, the data can be downloaded [here](). "train_no_decl.jsonl", "train_no_api.jsonl" and "train_no_control.jsonl" represent datasets that do not contain transformations of declaration, API and control structure, respectively. 
+For effects of augmentation type in Section 5.2, the data can be downloaded [here](https://zenodo.org/record/5713901). "train_no_decl.jsonl", "train_no_api.jsonl" and "train_no_control.jsonl" represent equal-sized datasets that do not contain transformations of declaration, API and control structure, respectively. 
