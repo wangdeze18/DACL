@@ -1,6 +1,6 @@
 # DACL
 
-This repository contains code for paper "Bridging Pre-trained Models and Downstream Tasks for Source Code Understanding".
+This repository contains code for paper "Bridging Pre-trained Models and Downstream Tasks for Source Code Understanding". (Accepted to the 44th International Conference on Software Engineering (ICSE 2022))
 # Directory Structure
 In this repository, we have the following directories:
 
@@ -94,3 +94,13 @@ For general fine-tuning (baseline models), please refer to [algorithm classifica
 
 # Acknowledgement
 Our implementation is adapted from [CodeXGLUE](https://github.com/microsoft/CodeXGLUE) and [GraphCodeBERT](https://github.com/microsoft/CodeBERT/tree/master/GraphCodeBERT/codesearch) for the implementation of pre-trained models.
+
+# Reference
+If you use this code, please consider citing us.
+```
+@inproceedings{Wang2021BridgingPM,
+  title={Bridging Pre-trained Models and Downstream Tasks for Source Code Understanding},
+  author={Deze Wang and Zhouyang Jia and Shanshan Li and Yue Yu and Yun Xiong and Wei Dong and Xiangke Liao},
+  year={2021}
+}
+```
